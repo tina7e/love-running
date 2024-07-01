@@ -26,6 +26,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex; 
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -58,13 +61,30 @@ h1 {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-   background-color: #ffffff;
-   width: 100%;
-   left: 0;
-   padding: 0 1rem;
+    background-color: #ffffff;
+    width: 100%;
+    /* simple solutions: */
+    left: 0;
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
- 
+    /* top of element should start at the bottom of its parent: */
+    top: 100%; 
+
+}
+
+/* Nav toggle */
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* Main content */
